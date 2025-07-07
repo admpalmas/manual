@@ -1,0 +1,168 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav {
+    background: #444;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.titulo {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.oculto {
+    display: none;
+}
+
+main {
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.azul {
+    color: #104292;
+    font-size: small;
+}
+
+.azul2 {
+    color: #1253bb;
+}
+
+.vermelho {
+    color: red;
+}
+
+.laranja {
+    color: rgb(235, 166, 38);
+}
+
+.grande {
+    font-size: x-large;
+}
+
+.pequeno {
+    font-size: small;
+}
+
+section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background: #48aa48;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #51bb51;
+}
+
+#btntramitar {
+    background: #104292;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#btntramitar:hover {
+    background: #1557c2;
+}
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #104292;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, opacity 0.3s;
+            z-index: 99;
+            padding: 0;
+            opacity: 0.9;
+        }
+        
+        #backToTop:hover {
+            background-color: #104292;
+            opacity: 1;
+        }       
+        #backToTop::after {
+            content: "↑";
+            font-size: 24px;
+            font-weight: bold;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (width < 770px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (width < 800px) {
+    h1 {
+        margin: auto 20px;
+        height: 100px;
+    }
+}
