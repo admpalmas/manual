@@ -190,6 +190,7 @@ footer {
 @media (width < 770px) {
     nav {
         display: none;
+        padding: 20 10;
     }
 }
 
