@@ -187,16 +187,13 @@ footer {
     }
 }
 
-@media (width < 770px) {
-    nav {
-        display: none;
-        padding: 20 10;
-    }
-}
-
-@media (width < 800px) {
+@media (width < 950px) {
     h1 {
         margin: auto 20px;
-        height: 100px;
+        height: 100%;
+        padding-bottom: 20px;
+    }
+    nav {
+        display: none;
     }
 }
