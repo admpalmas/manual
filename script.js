@@ -100,6 +100,18 @@ function toggleSection8() {
     }
 }
 
+function toggleSection9() {
+    const section = document.getElementById('infoSection9');
+    const arrow = document.getElementById('arrow9');
+    if (section.style.display === 'none' || section.style.display === '') {
+        section.style.display = 'block';
+        arrow.textContent = '🔼';
+    } else {
+        section.style.display = 'none';
+        arrow.textContent = '🔽';
+    }
+}
+
 // toggleSection('infoSection', 'arrow');
 // toggleSection('infoSection2', 'arrow2');
 // toggleSection('infoSection3', 'arrow3');
