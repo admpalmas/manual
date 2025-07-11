@@ -99,6 +99,16 @@ function toggleSection8() {
         arrow.textContent = '🔽';
     }
 }
+
+// toggleSection('infoSection', 'arrow');
+// toggleSection('infoSection2', 'arrow2');
+// toggleSection('infoSection3', 'arrow3');
+// toggleSection('infoSection4', 'arrow4');
+// toggleSection('infoSection5', 'arrow5');
+// toggleSection('infoSection6', 'arrow6');
+// toggleSection('infoSection7', 'arrow7');
+// toggleSection('infoSection8', 'arrow8');
+
 window.addEventListener('load', function() {
     if (window.location.hash) {
         history.replaceState(null, null, ' ');
@@ -141,6 +151,52 @@ navLinks.forEach(link => {
             setTimeout(() => {
                 targetSection.classList.remove('highlight');
             }, 1000);
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('themeToggle');
+    const htmlElement = document.documentElement;          
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    htmlElement.setAttribute('data-theme', savedTheme);
+            
+    updateToggleButton(savedTheme);
+            
+    themeToggle.addEventListener('click', function() {
+        const currentTheme = htmlElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                
+        htmlElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+                
+        updateToggleButton(newTheme);
+    });
+    function updateToggleButton(theme) {
+        const sunIcon = document.querySelector('.sun');
+        const moonIcon = document.querySelector('.moon');
+                
+        if (theme === 'dark') {
+            sunIcon.style.transform = 'translateY(-40px)';
+            moonIcon.style.transform = 'translateY(0)';
+        } else {
+            sunIcon.style.transform = 'translateY(0)';
+            moonIcon.style.transform = 'translateY(40px)';
+        }
+    }
+            
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    if (prefersDark.matches && !localStorage.getItem('theme')) {
+        htmlElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        updateToggleButton('dark');
+    }
+            
+    prefersDark.addListener(e => {
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            htmlElement.setAttribute('data-theme', newTheme);
+            updateToggleButton(newTheme);
         }
     });
 });
