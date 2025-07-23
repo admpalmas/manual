@@ -224,3 +224,40 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const navbar = document.querySelector('.navbar');
+    const overlay = document.querySelector('.overlay');
+    const body = document.body;
+// Função para alternar o menu
+    function toggleMenu() {
+        hamburgerBtn.classList.toggle('open');
+        navbar.classList.toggle('open');
+        overlay.classList.toggle('active');
+                
+// Desabilita o scroll do body quando o menu está aberto
+        if (navbar.classList.contains('open')) {
+            body.style.overflow = 'hidden';
+        } else {
+            body.style.overflow = '';
+        }
+    }
+// Evento de clique no botão hamburger
+    hamburgerBtn.addEventListener('click', toggleMenu);
+// Evento de clique no overlay para fechar o menu
+    overlay.addEventListener('click', toggleMenu);
+// Fechar o menu ao clicar em um link (opcional)
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', toggleMenu);
+    });
+// Fechar o menu ao redimensionar a janela para desktop
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && navbar.classList.contains('open')) {
+            toggleMenu();
+        }
+    });
+});
+
+
