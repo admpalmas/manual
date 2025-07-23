@@ -12,21 +12,31 @@
         <img src="./images/icon.png" alt="" width="80px">
         <h1>Manual - Coordenação Regional de Administração</h1>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#sgd">SGD</a></li>
-            <li><a href="#chamados">Chamados</a></li>
-            <li><a href="#incluir">Ordem de Tráfego</a></li>
-            <li><a href="#impressoras">Relatório das Impressoras</a></li>
-            <li><a href="#adicionalNoturno">Adicional Noturno</a></li>
-            <li><a href="#multas">Consultar Multas</a></li>
-            <li><a href="#correios">Correios</a></li>
-            <li><a href="#patrimonio">Patrimônio</a></li>
-            <li><a href="#almoxarifado">Almoxarifado</a></li>
-            <li><a href="#email">Email - Viagem</a></li>
-            <li><a href="#copysys">CopySystems</a></li>
+
+    <!-- Botão hamburger -->
+    <div class="hamburger-btn">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+    </div>
+    <!-- Barra de navegação oculta -->
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#sgd" class="nav-link">SGD</a></li>
+            <li class="nav-item"><a href="#chamados" class="nav-link">Chamados</a></li>
+            <li class="nav-item"><a href="#incluir" class="nav-link">Ordem de Tráfego</a></li>
+            <li class="nav-item"><a href="#impressoras" class="nav-link">Relatório das Impressoras</a></li>
+            <li class="nav-item"><a href="#adicionalNoturno" class="nav-link">Adicional Noturno</a></li>
+            <li class="nav-item"><a href="#multas" class="nav-link">Consultar Multas</a></li>
+            <li class="nav-item"><a href="#correios" class="nav-link">Correios</a></li>
+            <li class="nav-item"><a href="#patrimonio" class="nav-link">Patrimônio</a></li>
+            <li class="nav-item"><a href="#almoxarifado" class="nav-link">Almoxarifado</a></li>
+            <li class="nav-item"><a href="#email" class="nav-link">Email - Viagem</a></li>
+            <li class="nav-item"><a href="#copysys" class="nav-link">CopySystems</a></li>
         </ul>
     </nav>
+    <!-- Overlay para fechar o menu ao clicar fora -->
+    <div class="overlay"></div>
     <main>
         <section id="sgd">
             <h2 class="titulo" onclick="toggleSection()">SGD <span id="arrow">🔽</span></h2>
