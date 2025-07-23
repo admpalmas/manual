@@ -64,7 +64,8 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* Estilo do botão hamburger */
+/*
+/* Estilo do botão hamburger 
 .hamburger-btn {
     position: fixed;
     top: 20px;
@@ -93,7 +94,7 @@ nav a:hover::after {
     background-color: white;
     transition: all 0.3s ease;
 }
-/* Estilo da barra de navegação */
+/* Estilo da barra de navegação 
 .navbar {
     position: fixed;
     top: 0;
@@ -109,7 +110,7 @@ nav a:hover::after {
 .navbar.open {
     left: 0;
 }
-/* Estilo dos itens do menu */
+/* Estilo dos itens do menu 
 .nav-list {
     margin-top: 80px;
     list-style: none;
@@ -129,7 +130,7 @@ nav a:hover::after {
     font-size: 18px;
     display: block;
 }
-/* Estilo do overlay */
+/* Estilo do overlay 
 .overlay {
     position: fixed;
     top: 0;
@@ -147,7 +148,7 @@ nav a:hover::after {
     visibility: visible;
 }
 
-/* Animação do botão hamburger quando aberto */
+/* Animação do botão hamburger quando aberto
 .hamburger-btn.open .hamburger-line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
@@ -156,8 +157,8 @@ nav a:hover::after {
 }
 .hamburger-btn.open .hamburger-line:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -7px);
-}
-
+} 
+*/
 .titulo {
     cursor: pointer;
     text-decoration: none;
