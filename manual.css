@@ -107,6 +107,19 @@ a {
     font-size: small;
 }
 
+table td {
+    padding: 5px 20px;
+}
+
+#tabelas {
+    display: flex;
+}
+
+#tabela1, #tabela2 {
+    padding-left: 20px;
+}
+
+
 section {
     background: var(--mc);
     margin: 20px 0;
