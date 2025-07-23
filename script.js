@@ -112,6 +112,18 @@ function toggleSection9() {
     }
 }
 
+function toggleSection10() {
+    const section = document.getElementById('infoSection10');
+    const arrow = document.getElementById('arrow10');
+    if (section.style.display === 'none' || section.style.display === '') {
+        section.style.display = 'block';
+        arrow.textContent = '🔼';
+    } else {
+        section.style.display = 'none';
+        arrow.textContent = '🔽';
+    }
+}
+
 // toggleSection('infoSection', 'arrow');
 // toggleSection('infoSection2', 'arrow2');
 // toggleSection('infoSection3', 'arrow3');
