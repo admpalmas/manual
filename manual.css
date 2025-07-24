@@ -284,6 +284,11 @@ html {
     scroll-behavior: smooth;
 }
 
+#memorando {
+    padding-left: 60px;
+    width: 60%;
+}
+
 footer {
     text-align: center;
     padding: 10px 0;
