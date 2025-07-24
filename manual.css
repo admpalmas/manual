@@ -21,35 +21,35 @@ header {
     text-align: center;
 }
 
-nav {
+.navbar2 {
     background: var(--md);
     color: var(--fontE);
     padding: 10px 0;
 }
 
-nav ul {
+.navbar2 .nav-list2 {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-around;
 }
 
-nav ul li {
+.navbar2 .nav-list2 .nav-item2 {
     display: inline;
     margin: 0 15px;
 }
 
-nav a {
+.navbar2 .nav-link2 {
     color: var(--fontC);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
-nav a:hover {
+.navbar2 .nav-link2:hover {
     color: var(--navC);
 }
 
-.nav a::after {
+.navbar2 .nav-link2::after {
     content: '';
     position: absolute;
     width: 0;
@@ -60,105 +60,14 @@ nav a:hover {
     transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+.navbar2 .nav-link2:hover::after {
     width: 100%;
 }
 
-/*
-/* Estilo do botão hamburger 
-.hamburger-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 100;
-    cursor: pointer;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: #2c3e50;
-    border-radius: 5px;
-    padding: 8px;
-}
-.hamburger-line {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-}
-
-.hamburger-line {
-    width: 100%;
-    height: 3px;
-    background-color: white;
-    transition: all 0.3s ease;
-}
-/* Estilo da barra de navegação 
 .navbar {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 300px;
-    height: 100vh;
-    background-color: #2c3e50;
-    color: white;
-    transition: left 0.5s;
-    z-index: 90;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-}
-.navbar.open {
-    left: 0;
-}
-/* Estilo dos itens do menu 
-.nav-list {
-    margin-top: 80px;
-    list-style: none;
-}
-.nav-item {
-    padding: 15px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transition: background-color 0.3s;
-}
-.nav-item:hover {
-    background-color: #34495e;
+    display: none;
 }
 
-.nav-link {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-}
-/* Estilo do overlay 
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 80;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
-}
-.overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-/* Animação do botão hamburger quando aberto
-.hamburger-btn.open .hamburger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger-btn.open .hamburger-line:nth-child(2) {
-    opacity: 0;
-}
-.hamburger-btn.open .hamburger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-} 
-*/
 .titulo {
     cursor: pointer;
     text-decoration: none;
@@ -308,15 +217,114 @@ footer {
     }
 }
 
-@media (width < 1320px) {
+@media (width < 1430px) {
     h1 {
         margin: auto 20px;
         height: 100%;
         padding-bottom: 20px;
     }
-    nav {
+    .navbar2 {
         display: none;
     }
+
+    .navbar {
+        display: block;
+    }
+
+    /* Estilo do botão hamburger */
+    .hamburger-btn {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 100;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        background-color: var(--es);
+        border-radius: 5px;
+        padding: 8px;
+    }
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger-line {
+        width: 100%;
+        height: 3px;
+        background-color: white;
+        transition: all 0.3s ease;
+    }
+    /* Estilo da barra de navegação */
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: -300px;
+        width: 300px;
+        height: 100vh;
+        background-color: var(--md);
+        color: var(--fontC);
+        transition: left 0.5s;
+        z-index: 90;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    }
+    .navbar.open {
+        left: 0;
+    }
+    /* Estilo dos itens do menu */
+    .nav-list {
+        margin-top: 80px;
+        list-style: none;
+    }
+    .nav-item {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background-color 0.3s;
+    }
+    .nav-item:hover {
+        background-color: #34495e;
+    }
+
+    .nav-link {
+        color: var(--fontC);
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+    }
+    /* Estilo do overlay */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 80;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Animação do botão hamburger quando aberto*/
+    .hamburger-btn.open .hamburger-line:nth-child(1) {
+        transform: rotate(45deg) translate(11px, 11px);
+    }
+    .hamburger-btn.open .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-btn.open .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(8px, -8px);
+    }
+
 }
 
 :root {
