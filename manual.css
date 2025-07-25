@@ -1,10 +1,10 @@
 :root {
-    --es: #212A3E; /*verde musgo*/
-    --md: #394867; /*verde escuro*/
-    --cl: #9BA4B5; /*bege escuro*/
-    --mc: #F1F6F9; /*bege claro*/
-    --fontE: white; /*fonte escura*/
-    --fontC: black; /*fonte clara*/
+    --es: #212A3E;
+    --md: #394867;
+    --cl: #9BA4B5; 
+    --mc: #F1F6F9; 
+    --fontE: white;
+    --fontC: black;
 }
 
 body {
@@ -210,6 +210,7 @@ table td {
 
 #tabelas {
     display: flex;
+    flex-direction: row;
 }
 
 #tabela1, #tabela2 {
@@ -423,6 +424,15 @@ footer {
         transform: rotate(-45deg) translate(8px, -8px);
     }
 
+}
+
+@media (width < 630px) {
+    #tabelas {
+        display: block;
+    }
+    #tabela1 {
+        padding-bottom: 20px;
+    }
 }
 
 :root {
